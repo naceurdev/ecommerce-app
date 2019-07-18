@@ -13,7 +13,6 @@ const Filter = ({
     <div className="col-md-4">
       {`${filteredProducts.length} products found.`}
     </div>
-    {console.log(filteredProducts)}
     <div className="col-md-4">
       <label>
         {'Order by'}

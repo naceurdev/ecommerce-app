@@ -31,29 +31,25 @@ class Home extends Component {
       sort,
     } = this.props;
     return (
-      <div className="container">
-        <h1>E-commerce Shopping Cart Application</h1>
-        <hr />
-        <div className="row">
-          <div className="col-md-9">
-            <Filter
-              handleSortChange={handlesortProducts}
-              handleSizeChange={handlefilterProducts}
-              products={products}
-              filteredProducts={filteredProducts}
-              size={size}
-              sort={sort}
-            />
-            <hr />
-            <Products products={filteredProducts} handleAddToCart={handleAddToCart} cartItems={cartItems} />
-          </div>
-          <div className="col-md-3">
-            <Basket
-              cartItems={cartItems}
-              handleRemoveFromCart={handleRemoveFromCart}
-              handleRemoveAllFromCart={handleRemoveAllFromCart}
-            />
-          </div>
+      <div className="row">
+        <div className="col-md-9">
+          <Filter
+            handleSortChange={handlesortProducts}
+            handleSizeChange={handlefilterProducts}
+            products={products}
+            filteredProducts={filteredProducts}
+            size={size}
+            sort={sort}
+          />
+          <hr />
+          <Products products={filteredProducts} handleAddToCart={handleAddToCart} cartItems={cartItems} />
+        </div>
+        <div className="col-md-3">
+          <Basket
+            cartItems={cartItems}
+            handleRemoveFromCart={handleRemoveFromCart}
+            handleRemoveAllFromCart={handleRemoveAllFromCart}
+          />
         </div>
       </div>
     );
