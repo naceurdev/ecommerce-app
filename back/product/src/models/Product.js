@@ -11,5 +11,4 @@ const productSchema = Schema(
   },
   { timestamps: true }
 );
-
 export default mongoose.model('Product', productSchema);
