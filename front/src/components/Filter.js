@@ -14,9 +14,11 @@ const Filter = ({
       {`${filteredProducts.length} products found.`}
     </div>
     <div className="col-md-4">
-      <label>
+      <label htmlFor="sort">
         {'Order by'}
         <select
+          id="sort"
+          name="sort"
           className="form-control"
           value={sort}
           onChange={(e) => handleSortChange(filteredProducts || products, e.target.value)}
@@ -28,9 +30,11 @@ const Filter = ({
       </label>
     </div>
     <div className="col-md-4">
-      <label>
+      <label htmlFor="size">
         {'Filter Size'}
         <select
+          id="size"
+          name="size"
           className="form-control"
           value={size}
           onChange={(e) => handleSizeChange(products, e.target.value)}

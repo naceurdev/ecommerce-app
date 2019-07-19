@@ -75,6 +75,14 @@ module.exports = {
     "linebreak-style": 0,
     "react/no-did-mount-set-state": 0,
     "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-static-element-interactions": 0
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "Label" ],
+      "required": {
+          "every": [ "nesting", "id" ]
+      },
+      "allowChildren": true
+  }],
+  "react/button-has-type": 0,
   },
 }

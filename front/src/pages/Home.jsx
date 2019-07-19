@@ -42,7 +42,11 @@ class Home extends Component {
             sort={sort}
           />
           <hr />
-          <Products products={filteredProducts} handleAddToCart={handleAddToCart} cartItems={cartItems} />
+          <Products
+            products={filteredProducts}
+            handleAddToCart={handleAddToCart}
+            cartItems={cartItems}
+          />
         </div>
         <div className="col-md-3">
           <Basket
