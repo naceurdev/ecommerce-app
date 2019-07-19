@@ -2,13 +2,11 @@
 import { FETCH_PRODUCTS, FILTER_PRODUCTS_BY_SIZE, ORDER_PRODUCTS_BY_PRICE } from './types';
 
 export const fetchProducts = () => (dispatch) => {
-  fetch('http://localhost:8000/products').then((res) => res.json())
+  fetch('http://localhost:3012/products').then((res) => res.json())
     .then((data) => dispatch({ type: FETCH_PRODUCTS, payload: data }));
 };
 
 export const filterProducts = (products, size) => (dispatch) => {
-  console.log(products, size);
-  
   return dispatch({
     type: FILTER_PRODUCTS_BY_SIZE,
     payload: {
@@ -22,6 +20,7 @@ export const sortProducts = (items, sort) => (dispatch) => {
   {
     const products = items.slice();
     if (sort !== '') {
+      // eslint-disable-next-line no-nested-ternary
       products.sort((a, b) => (sort === 'lowest')
         ? (a.price > b.price ? 1 : -1)
         : (a.price < b.price ? 1 : -1));
