@@ -2,13 +2,11 @@
 import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
-import dotenv from 'dotenv';
 
 import config from './config';
 import db from './db/index';
 import handlers from './handlers/index';
 
-dotenv.config({ path: `${process.cwd()}/.env` });
 
 const app = new Koa();
 const router = new Router();
@@ -32,7 +30,7 @@ app.on('error', (err, ctx) => {
 });
 
 
-app.listen(config.port, () => {
+app.listen(config.port || 5000, () => {
   console.log(`user Serivce started on port ${config.port}`);
   db.initialize();
 });
