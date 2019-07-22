@@ -12,7 +12,11 @@ const initialValue = {
 };
 
 const schemaValidation = Yup.object().shape({
-  firstName: Yup.string().required('required'),
+  firstName: Yup.string().required('FirstName is required'),
+  lastName: Yup.string().required('LastName is required'),
+  email: Yup.string().email().required('Email is required'),
+  password: Yup.string().required('Password is required'),
+  confPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Password must match'),
 });
 
 const SignUp = () => (
