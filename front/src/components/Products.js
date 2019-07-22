@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import util from '../util';
-import { Button } from '../Styles';
+import { Button } from '../Common';
 
 const Products = ({
   products,

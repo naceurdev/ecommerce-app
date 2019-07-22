@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SignUpFormStyle from './SignUpFormStyle';
-import { Input, Button } from '../../Styles';
+import { Input, Button } from '../../Common';
 
 const SignUpForm = ({
   errors,
