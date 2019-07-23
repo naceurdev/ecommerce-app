@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "eslint-config-airbnb": "^17.1.1",
     "express": "^4.16.4",
     "formik": "^1.5.8",

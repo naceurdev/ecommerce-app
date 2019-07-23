@@ -2,11 +2,13 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from './types';
 
 export const addToCart = (items, product) => (dispatch) => {
-  const cartItems = (items||[]).slice();
+  const cartItems = (items || []).slice();
   let productAlreadyInCart = false;
+  const { _id: productId } = product;
 
   cartItems.forEach((item) => {
-    if (item.id === product.id) {
+    const { _id: itemId } = item;
+    if (itemId === productId) {
       item.count += 1;
       productAlreadyInCart = true;
     }
