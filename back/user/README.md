@@ -11,16 +11,4 @@ NODE_ENV=development
 MONGODB_URI=mongodb://localhost:27017/user <- The Mongo database URL
 ```
 
-## How to use -- Developer edition
-
-```
-git clone https://bitbucket.org/oyez/users && \
-cd user && \
-yarn && \
-cp .env.example .env
-
-# Modify .env file for you !!
-
-yarn dev
-```
 
