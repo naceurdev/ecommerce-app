@@ -1,22 +1,7 @@
 import React from 'react';
-const SignIn = () => (
-  <div className="wrapper fadeInDown">
-    <div id="formContent">
-      <div className="fadeIn first">
-        <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-      </div>
+import SignIn from '../../components/SignIn';
 
-      <form>
-        <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" />
-        <input type="text" id="password" className="fadeIn third" name="login" placeholder="password" />
-        <button type="submit" className="fadeIn fourth" value="Log In" />
-      </form>
 
-      <div id="formFooter">
-        <a className="underlineHover" href="#">Forgot Password?</a>
-      </div>
+const SignInPage = () => <SignIn />;
 
-    </div>
-  </div>
-);
-export default SignIn;
+export default SignInPage;
