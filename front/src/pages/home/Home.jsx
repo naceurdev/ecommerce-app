@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Products from '../components/Products';
-import Filter from '../components/Filter';
-import Basket from '../components/Basket';
-import { fetchProducts, filterProducts, sortProducts } from '../actions/productActions';
-import { addToCart, removeFromCart, removeAllFromCart } from '../actions/cartActions';
+import Products from '../../components/Home/Products';
+import Filter from '../../components/Home/Filter';
+import Basket from '../../components/Home/Basket';
+import { fetchProducts, filterProducts, sortProducts } from '../../actions/productActions';
+import { addToCart, removeFromCart, removeAllFromCart } from '../../actions/cartActions';
 
 
 class Home extends Component {
   componentWillMount() {
     const { getProducts } = this.props;
     getProducts();
-    // if (localStorage.getItem('cartItems')) {
-    //   this.setState({})
-    // }
   }
 
   render() {

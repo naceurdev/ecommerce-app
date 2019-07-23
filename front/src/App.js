@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
+import Home from './pages/home/Home';
 import SignIn from './pages/user/SignIn';
 import SignUp from './pages/user/SignUp';
 
 const App = () => (
   <div className="container">
-    <h1>E-commerce Shopping Cart Application</h1>
+    <h1><a href="/">E-commerce Shopping Cart Application</a></h1>
     <a className="col-sm-5" href="/signin">Sign In</a>
     <a className="col-sm-1" href="/signup">Sign Up</a>
     <hr />

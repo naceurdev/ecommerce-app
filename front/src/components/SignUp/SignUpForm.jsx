@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SignUpFormStyle from './SignUpFormStyle';
-import { Input, Button } from '../../Common';
+import { Input, Button } from '../../commun';
 
 const SignUpForm = ({
   errors,
@@ -60,7 +60,7 @@ const SignUpForm = ({
     <Input
       type="password"
       name="confPassword"
-      label="confPassword"
+      label="Confirm Password"
       value={values.confPassword}
       onChange={handleChange}
       onBlur={handleBlur}
