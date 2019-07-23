@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import util from '../util';
-import { Button } from '../Common';
+import util from '../../util';
+import { Button } from '../../commun';
 
 const Basket = ({ cartItems, handleRemoveFromCart, handleRemoveAllFromCart }) => (
   <div className="alert alert-info">
