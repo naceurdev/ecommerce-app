@@ -2,6 +2,7 @@
 import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
+import cors from'@koa/cors';
 
 import config from './config';
 import db from './db/index';
@@ -12,6 +13,8 @@ const app = new Koa();
 const router = new Router();
 
 app.use(bodyParser());
+
+app.use(cors());
 
 app.use(router.routes());
 app.use(router.allowedMethods());
