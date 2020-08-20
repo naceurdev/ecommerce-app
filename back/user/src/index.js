@@ -13,7 +13,6 @@ const app = new Koa();
 const router = new Router();
 
 app.use(bodyParser());
-
 app.use(cors());
 
 app.use(router.routes());
