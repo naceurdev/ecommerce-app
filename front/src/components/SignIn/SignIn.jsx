@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import SignInForm from './SignInForm';
+import { signIn } from '../../actions/userActions';
 
 const initialValue = {
   email: '',
@@ -11,7 +12,7 @@ const SignUp = () => (
   <Formik
     initialValues={initialValue}
     onSubmit={(values) => {
-      console.log('--values--', values);
+      signIn(values);
     }}
     render={(props) => <SignInForm {...props} />}
   />

@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import SignUpForm from './SignUpForm';
+import { signUp } from '../../actions/userActions';
 
 const initialValue = {
   firstName: '',
@@ -19,15 +21,15 @@ const schemaValidation = Yup.object().shape({
   confPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Password must match'),
 });
 
-const SignUp = () => (
+const SignUp = ({ createUser }) => (
   <Formik
     initialValues={initialValue}
     validationSchema={schemaValidation}
-    onSubmit={(values) => {
-      console.log('--values--', values);
-    }}
+    onSubmit={(values) => { createUser(values); }}
     render={(props) => <SignUpForm {...props} />}
   />
 );
-
-export default SignUp;
+const mapDispatchToProps = (dispatch) => ({
+  createUser: (values) => dispatch(signUp(values)),
+});
+export default connect(null, mapDispatchToProps)(SignUp);
